@@ -1,10 +1,10 @@
-const Buttons = ({ tasks, hideDoneTasks }) => {
+const Buttons = ({ tasks, hideDone }) => {
   return (
     <div>
       {tasks.length > 0 && (
         <>
           <button className="section__button">
-            {hideDoneTasks.hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone{" "}
+            {hideDone.hideDone ? "Pokaż" : "Ukryj"} ukończone{" "}
           </button>
           <button
             className="section__button"
