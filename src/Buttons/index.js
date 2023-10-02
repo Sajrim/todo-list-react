@@ -1,9 +1,9 @@
-const Buttons = ({ tasks, hideDone }) => {
+const Buttons = ({ tasks, hideDone, toggleHideDone }) => {
   return (
     <div>
       {tasks.length > 0 && (
         <>
-          <button className="section__button">
+          <button onClick={toggleHideDone} className="section__button">
             {hideDone.hideDone ? "Pokaż" : "Ukryj"} ukończone{" "}
           </button>
           <button
