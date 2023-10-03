@@ -1,4 +1,4 @@
-const Buttons = ({ tasks, hideDone, toggleHideDone }) => {
+const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => {
   return (
     <div>
       {tasks.length > 0 && (
@@ -7,6 +7,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone }) => {
             {hideDone.hideDone ? "Pokaż" : "Ukryj"} ukończone{" "}
           </button>
           <button
+            onClick={setAllDone}
             className="section__button"
             disabled={tasks.every(({ done }) => done)}
           >
